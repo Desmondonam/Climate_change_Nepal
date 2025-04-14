@@ -6,7 +6,7 @@ import streamlit as st
 def load_data():
     """
     Generate or load data (Climate).
-    In real world you will fo ahead and load your CSV data or read your API data
+    In real world you will go ahead and load your CSV data or read your API data
     """  
     # Create data for year of months - temperature averages
     dates = pd.date_range(start = '2010-01-01', end ='2023-12-31', freq='M')

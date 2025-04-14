@@ -21,7 +21,7 @@ df = load_data()
 
 # Give the sidebar for the app navigation
 st.sidebar.title("Navigation")
-page = st.sidebar.radio("Go to", ["Data Exploration", "Model Training", 'Prediction"'])
+page = st.sidebar.radio("Go to", ["Data Exploration", "Model Training", 'Prediction'])
 
 
 # Display the selected page

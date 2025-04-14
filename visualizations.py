@@ -52,7 +52,7 @@ def plot_actual_vs_predicted(y_test, y_pred):
     ax.set_title("Actual vs Predicted Temperatures ")
     return fig
 
-def plot_prection_context(hist_temps, pred_year, pred_month, prediction):
+def plot_prediction_context(hist_temps, pred_year, pred_month, prediction):
     """
     Plot for me the prediction in historical context
     """
@@ -69,8 +69,8 @@ def plot_prection_context(hist_temps, pred_year, pred_month, prediction):
     ax.scatter([pred_year], [prediction], color = 'red', s =100, label = "Prediction")
 
     # Add a trend line
-    z = np.polyfit(year_hist, temp_hist)
-    p = np.poly1D(z)
+    z = np.polyfit(year_hist, temp_hist, 1)
+    p = np.poly1d(z)
     ax.plot(range(2010, pred_year + 1), p(range(2010, pred_year + 1)), 'g-', label = "Trend")
 
     ax.set_xlabel("Year")
